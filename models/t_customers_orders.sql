@@ -1,5 +1,5 @@
 
-with customer_orders as (
+with customers_orders as (
 select
 customer_id,
 min(order_date) as first_order_date,
@@ -8,5 +8,5 @@ count(*) as number_of_orders
 from marketing_db.marketing_schema.orders
 group by 1
 )
-select * From customer_orders
+select * From customers_orders
 order by customer_id
