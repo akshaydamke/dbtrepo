@@ -1,8 +1,4 @@
-{{
-    config(
-        materialized='table'
-    )
-}}
+
 select * from MARKETING_DB.MARKETING_SCHEMA.T_ORDERS
 where o_orderpriority='2-HIGH'
 and o_orderstatus='O'
